@@ -1,0 +1,73 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext.kotlin_version = "1.4.21"
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.3'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    //dependencies version
+    //kotlin
+    coreVersion = '1.3.2'
+
+    //ui
+    appCompatVersion = '1.2.0'
+    constraintLayoutVersion = '2.0.4'
+    materialVersion = '1.2.1'
+    navFragVersion = '2.3.2'
+    navUiVersion = '2.3.2'
+    recyclerViewVersion = '1.1.0'
+    glideVersion = '4.11.0'
+    circleIndicatorVersion = '2.1.4'
+    paggingVersion = '2.1.2'
+
+    //arch
+    archLifecycleVersion = '2.2.0'
+    idleResourceVersion = '3.3.0'
+
+    //api
+    retrofitVersion = "2.9.0"
+    okHttpVersion = "4.9.0"
+
+    //room
+    roomVersion = '2.2.3'
+    roomRuntimeVersion = '2.2.6'
+
+    //di
+    koinVersion = "2.2.1"
+
+    //coroutines
+    coroutinesVersion = '1.3.7'
+
+    //testing
+    junitVersion = '4.13.1'
+    junitAndroTestVersion = '1.1.2'
+    espressoVersion = '3.3.0'
+    androidXTestVersion = '1.3.0'
+    mockitoVersion = '2.23.4'
+    mockitoKotlinVersion = '2.2.0'
+    archTestingVersion = '2.1.0'
+    roomTestingVersion = '2.2.6'
+
+}

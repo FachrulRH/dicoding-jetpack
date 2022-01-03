@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginEnd="10dp"
+    android:layout_width="350dp"
+    android:layout_height="235dp"
+    android:backgroundTint="@color/colorSecondary"
+    android:background="@drawable/rectangle">
+
+    <ImageView
+        android:id="@+id/poster"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/desc_trending_movies"
+        tools:src="@drawable/poster_how_to_train" />
+
+    <TextView
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:id="@+id/text_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_below="@id/poster"
+        android:layout_margin="4dp"
+        tools:text="How to Train Your Dragon"/>
+
+    <TextView
+        style="@style/TextAppearance.MaterialComponents.Subtitle1"
+        android:id="@+id/text_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_name"
+        android:textColor="@color/white"
+        android:drawablePadding="5dp"
+        android:layout_marginStart="4dp"
+        app:drawableEndCompat="@drawable/ic_rate"
+        tools:text="7.8/10.0"/>
+</RelativeLayout>
